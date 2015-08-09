@@ -1,0 +1,44 @@
+{
+  "name": "browser-event-debugger",
+  "version": "0.1.0",
+  "description": "For those moments when you don't know who's adding event listeners on a page.",
+  "main": "index.js",
+  "dependencies": {
+    "global": "^4.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "clone": "^1.0.2",
+    "eslint": "^1.0.0",
+    "husky": "^0.9.2",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "proxyquire": "^1.6.0",
+    "should": "^7.0.2",
+    "uglify-js": "^2.4.24"
+  },
+  "scripts": {
+    "build": "browserify index.js --standalone=_EventDebugger | uglifyjs -mc > dist/EventDebugger.min.js",
+    "coverage": "istanbul cover _mocha -- -R spec test/*.js",
+    "lint": "eslint index.js lib/*.js test/*.js",
+    "precommit": "npm run lint && npm run test",
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessioalex/browser-event-debugger.git"
+  },
+  "keywords": [
+    "addEventListener",
+    "events",
+    "browser",
+    "debugging",
+    "debug"
+  ],
+  "author": "Alexandru Vladutu <alexandru.vladutu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alessioalex/addevent-sniffer/issues"
+  },
+  "homepage": "https://github.com/alessioalex/addevent-sniffer#readme"
+}

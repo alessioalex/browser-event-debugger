@@ -1,5 +1,6 @@
 # browser-event-debugger
 
+[![build status](https://secure.travis-ci.org/alessioalex/browser-event-debugger.png)](http://travis-ci.org/alessioalex/browser-event-debugger)
 For those moments when you don't know who's adding event listeners on a page.
 
 ![pic](https://cldup.com/B1HIUnmRf1.png)
